@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebDevEx2IoT.Models.Device>
+
+@{
+    ViewBag.Title = "Devices Index";
+}
+
+@using WebDevEx2IoT.HtmlHelpers
+
+<h2>Devices Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ThingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IpAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrandName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IpAddress)
+        </td>
+        <td>
+            @DeviceLink.DeviceHtmlLink(item.DeviceType)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.ThingId })
+        </td>
+    </tr>
+}
+
+</table>

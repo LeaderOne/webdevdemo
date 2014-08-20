@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            
+            <h3>@Html.ActionLink("Device Management", "Index", "DeviceManagement")</h3>
+            <h3>@Html.ActionLink("Air Conditioner Management", "Index", "AirCo")</h3>
+            <h3>@Html.ActionLink("Central Air Management", "Index", "CentralAir")</h3>
+            <h3>@Html.ActionLink("Wall Mounted AC Management", "Index", "WallMounted")</h3>
+        </div>
+    </section>
+}
+
+<p>2014 Tulsa Web Dev Internet of Things Demo, Object-Relational Talk Part Two.</p>

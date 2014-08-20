@@ -1,0 +1,103 @@
+﻿@model WebDevEx2IoT.Models.CentralAir
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CentralAir</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RefrigerantType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RefrigerantType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VoltagePhase)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VoltagePhase)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompressorWarrantyYrs)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompressorWarrantyYrs)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SetPointHi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SetPointHi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SetPointLo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SetPointLo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TimeOff)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeOff)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TimeOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TimeOn)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BtuPerHour)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BtuPerHour)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ThingId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ThingId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BrandName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BrandName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IpAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IpAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DeviceType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DeviceType)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

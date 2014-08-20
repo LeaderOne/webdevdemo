@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebDevEx2IoT.Models.CentralAir>
+
+@{
+    ViewBag.Title = "Central Air AC Index";
+}
+
+@using WebDevEx2IoT.HtmlHelpers
+
+<h2>Central Air AC Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RefrigerantType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VoltagePhase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompressorWarrantyYrs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SetPointHi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SetPointLo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BtuPerHour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IpAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefrigerantType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VoltagePhase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompressorWarrantyYrs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SetPointHi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SetPointLo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeOff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BtuPerHour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrandName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IpAddress)
+        </td>
+        <td>
+            @DeviceLink.DeviceHtmlLink(item.DeviceType)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.ThingId })
+        </td>
+    </tr>
+}
+
+</table>

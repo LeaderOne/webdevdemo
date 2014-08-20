@@ -1,0 +1,108 @@
+﻿@model WebDevEx2IoT.Models.CentralAir
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>CentralAir</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RefrigerantType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RefrigerantType)
+            @Html.ValidationMessageFor(model => model.RefrigerantType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VoltagePhase)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VoltagePhase)
+            @Html.ValidationMessageFor(model => model.VoltagePhase)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CompressorWarrantyYrs)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CompressorWarrantyYrs)
+            @Html.ValidationMessageFor(model => model.CompressorWarrantyYrs)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SetPointHi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SetPointHi)
+            @Html.ValidationMessageFor(model => model.SetPointHi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SetPointLo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SetPointLo)
+            @Html.ValidationMessageFor(model => model.SetPointLo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeOff)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TimeOff)
+            @Html.ValidationMessageFor(model => model.TimeOff)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeOn)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TimeOn)
+            @Html.ValidationMessageFor(model => model.TimeOn)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BtuPerHour)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BtuPerHour)
+            @Html.ValidationMessageFor(model => model.BtuPerHour)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BrandName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BrandName)
+            @Html.ValidationMessageFor(model => model.BrandName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IpAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IpAddress)
+            @Html.ValidationMessageFor(model => model.IpAddress)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stock list updates</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Update Stock Tickers</h1>
+    
+    <table>
+    	<th>Symbol</th>
+    	<th>Company</th>
+    	
+    	<tr th:each="ticker : ${changes}">
+    		<td th:text="${ticker.symbol}" />
+    		<td th:text="${ticker.companyName}" />
+    	</tr>
+    </table>
+    
+    <a href="/tickers">Go back to previous page.</a>
+</body>
+</html>
